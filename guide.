@@ -1,0 +1,19 @@
+// ในส่วนbackend (django)
+// python -m venv venv
+// venv\Scripts\activate
+// pip install django
+// pip install djangorestframework
+// pip install django-cors-headers
+// (ใช้ฐานข้อมูนเป็นexcel)
+// pip install pandas openpyxl
+
+
+// ในส่วนfrontend (yarn)
+// npm install --global yarn
+// yarn add axios react-router-dom
+
+// ตอนrun code
+// backend: python manage.py runserver
+// frontend: yarn start
+
+// ในviews.py ต้องแก้ที่อยู่ไฟล์ของexcelด้วย มีในบรรทัดที่23และ237
