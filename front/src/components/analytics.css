@@ -1,0 +1,85 @@
+.header-2 {
+    background-color: var(--white-color);
+    z-index: 1000;
+    top: 0;
+    min-width: 100vw;
+    position: fixed;
+    min-height: 23%;
+    display: flex;
+}
+
+.ana-scroll {
+    top: 60%;
+    margin: 20px;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.ana-btn.active {
+    margin: 5px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    height: fit-content;
+    font-size: 16px;
+    padding: 9px;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+}
+
+.main-ana {
+    max-width: 95vw;
+    position: absolute;
+    top: 27%;
+    margin: 25px;
+    padding-bottom: 80px;
+}
+
+.RevenueChart {
+    width: 87vw;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 20px;
+}
+
+.two-input {
+    padding: 10px;
+    background-color: var(--white-color);
+    z-index: 1000;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.table {
+    width: 87vw;
+    margin-bottom: 20px;
+}
+
+.column {
+    color: var(--main-color);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px;
+    border-bottom: 1px solid var(--blue-gray);
+}
+
+.title-table {
+    color: var(--white-color);
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 7px;
+}
+
+.title-p {
+    margin: 0;
+}
+
+.count-p {
+    text-align: center;
+    margin: 0;
+}

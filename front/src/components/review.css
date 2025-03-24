@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jaro:opsz@6..72&display=swap'); 
+
+:root {
+    --main-color: #29B6F6;
+    --main-color-dark: #0277BD;
+    --main-color-light: #C1E2F1;
+    --green-color: #B8CF7E;
+    --yellow-color: #FFC96B;
+    --red-color: #FF796D;
+    --blue-gray: #7399AA;
+    --gray-color: #F5F5F5;
+    --gray-light: #D9D9D9;
+    --white-color: #ffffff;
+    --black-color: #000000;
+}
+
+.header-5{
+    background-color: var(--white-color);
+    z-index: 1000;
+    top: 0;
+    min-width: 100vw;
+    position: fixed;
+    min-height: 33%;
+    display: flex;
+}
+
+.main-review {
+    max-width: 94vw;
+    position: absolute;
+    top: 32%;
+    margin: 20px;
+    padding-bottom: 100px;
+}
+
+
+.rate-comment {
+    margin: 0;
+    font-size: 30px;
+}
+
+.comment {
+    flex-grow: 1;
+}
+
+.Ratename, .date {
+    margin: 0;
+    padding-top: 10px;
+}
+
+.Ratename {
+    font-size: 20px;
+}
+
+.profile-review {
+    border-radius: 100%;
+    width: 17%;
+    aspect-ratio: 1 / 1;
+    padding: 10px 20px 10px 10px;
+    float: left;
+}
+
+.review-cont {
+    color: var(--main-color-dark);
+    padding: 20px;
+    height: fit-content;
+    margin: 0 15px 20px 0;
+}
+
+.select-review {
+    top: 27%;
+    position: fixed;
+    width: 50%;
+    margin: 0;
+    left: 20px;
+    font-size: 16px;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    float: right;
+}
+
+.TxReview {
+    padding-top: 60px;
+    margin: 20px 30px;
+}
+
+.RateMean {
+    justify-items: center;
+    align-content: center;
+    min-width: 100vw;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    top: 47%;
+}
+
+.star {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+hr {
+    width: 85%;
+}
