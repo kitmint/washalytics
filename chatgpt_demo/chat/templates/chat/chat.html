@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="icon" href="bot.png" />
+    <link rel="stylesheet" href=/static/chat/chatstyle.css />
+</head>
+<body>
+    <div id="chat-container">  
+        <h1>WashAlytic Chatbot</h1>  <!-- No need for extra <div>, it's already centered in CSS -->
+        
+        <div id="chat-messages">
+            <!-- Chat messages will appear here -->
+        </div>
+        
+        <div style="display: flex; padding: 10px;">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script>
+       function sendMessage() {
+            var userInput = $('#user-input').val();
+            if (userInput.trim() !== '') {
+                $('#chat-messages').append('<div class="message user-message"><strong>You:</strong> ' + userInput + '</div>');
+                $('#user-input').val('');
+
+                $.ajax({
+                    url: '{% url "chat" %}',  // Adjust if needed
+                    type: 'POST',
+                    data: {
+                        'message': userInput
+                    },
+                    success: function(response) {
+                        displayAIResponse(response);
+                        $('#chat-messages').scrollTop($('#chat-messages')[0].scrollHeight);
+                    }
+                });
+            }
+        }
+        function displayAIResponse(data) {
+            const chatBox = document.getElementById("chat-messages");
+            const responseDiv = document.createElement("div");
+            responseDiv.classList.add("message", "bot-message");
+
+            // Add AI response text
+            responseDiv.innerHTML = `<strong>AI:</strong> <p>${data.response}</p>`;
+
+            // Add graph image if available
+            if (data.graph) {
+                const img = document.createElement("img");
+                img.src = `data:image/png;base64,${data.graph}`;
+                img.style.maxWidth = "100%";
+                img.style.marginTop = "10px";
+                responseDiv.appendChild(img);
+            }
+
+            chatBox.appendChild(responseDiv);
+        }
+    </script>
+</body>
+</html>
